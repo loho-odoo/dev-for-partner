@@ -19,4 +19,4 @@ class Estate(models.Model):
             ('done','Done'),
             ('cancel','Cancel'),
         ],
-        string="Status", readonly=True, copy=False, tracking=3, default='new')
+        string="Status", copy=False, tracking=3, default='new')
