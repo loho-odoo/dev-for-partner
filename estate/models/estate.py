@@ -4,7 +4,7 @@ from dateutil.relativedelta import relativedelta
 ESTATE_STATUS = [
     ('draft',"Brouillon"),
     ('sent',"Envoyé"),
-    ('confirmed',"Confirmé")
+    ('confirmed',"Confirmé"),
 ]
 
 class Estate(models.Model):
@@ -27,4 +27,4 @@ class Estate(models.Model):
         ],
         string="Status", copy=False, tracking=3, default='new')
 
-    stage = fields.Selection(selection=ESTATE_STATUS,string="Status",readonly=True, copy=False, index=True,tracking=3,default='draft')
+    stage = fields.Selection(selection=ESTATE_STATUS, string="Status", readonly=True, copy=False, index=True, tracking=3, default='draft')
