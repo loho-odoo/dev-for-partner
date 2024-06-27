@@ -1,6 +1,12 @@
 from odoo import models, fields
 from dateutil.relativedelta import relativedelta
 
+ESTATE_STATUS = [
+    ('draft',"Brouillon"),
+    ('sent',"Envoyé"),
+    ('confirmed',"Confirmé")
+]
+
 class Estate(models.Model):
     _name= "estate"
     _description= "Estate"
