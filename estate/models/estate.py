@@ -27,4 +27,4 @@ class Estate(models.Model):
         ],
         string="Status", copy=False, tracking=3, default='new')
 
-    stage = fields.Selection(selection=SALE_ORDER_STATE,string="Status",readonly=True, copy=False, index=True,tracking=3,default='draft')
+    stage = fields.Selection(selection=ESTATE_STATUS,string="Status",readonly=True, copy=False, index=True,tracking=3,default='draft')
