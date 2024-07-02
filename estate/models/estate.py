@@ -13,4 +13,4 @@ class Estate(models.Model):
 
     date_availability = fields.Date(default=lambda self: fields.Datetime.today() + relativedelta(months=3), copy=False)
     active = fields.Boolean(default=True)
-    kanban_state = fields.Selection([('normal', 'In Progress'), ('done', 'Done'), ('blocked', 'Blocked')], default='normal', copy=False)
+    state = fields.Selection([('normal', 'In Progress'),('done', 'Done'), ('blocked', 'Blocked')], default='normal', copy=False)
